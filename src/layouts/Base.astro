@@ -2,9 +2,7 @@
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/600.css';
 import '../styles/global.css';
-import '../styles/designs/index.css';
 import logo from '../assets/brand/logo.svg';
-import DesignToggle from '../components/DesignToggle.astro';
 import { site, type NavItem } from '../site';
 
 interface Props {
@@ -33,7 +31,7 @@ const ld = {
 };
 ---
 <!doctype html>
-<html lang="da" data-design="current">
+<html lang="da">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,16 +49,7 @@ const ld = {
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(ld)} />
-    <script is:inline>
-      // Gem og genbrug valgt designforslag (kun til gennemsyn)
-      (function () {
-        try {
-          var q = new URLSearchParams(location.search).get('design');
-          var d = q || localStorage.getItem('design');
-          if (d) document.documentElement.dataset.design = d;
-        } catch (e) {}
-      })();
-    </script>
+    <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body>
     <a class="skip" href="#indhold">Gå til indhold</a>
@@ -70,27 +59,30 @@ const ld = {
           <img src={logo.src} alt="" width="44" height="32" />
           <span>{site.name}</span>
         </a>
-        <nav aria-label="Hovedmenu">
-          <details class="menu">
-            <summary><span>Menu</span></summary>
-            <ul>
-              {site.nav.map((i: NavItem) =>
-                i.children ? (
-                  <li class="has-sub">
-                    <span class="sub-label" aria-current={active(i) ? 'true' : undefined}>{i.label}</span>
-                    <ul>
-                      {i.children.map((c) => (
-                        <li><a href={c.href} aria-current={path.startsWith(c.href) ? 'page' : undefined}>{c.label}</a></li>
-                      ))}
-                    </ul>
-                  </li>
-                ) : (
-                  <li><a href={i.href} aria-current={active(i) ? 'page' : undefined}>{i.label}</a></li>
-                ),
-              )}
-            </ul>
-          </details>
+        <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false">
+          <span class="burger" aria-hidden="true"></span><span>Menu</span>
+        </button>
+        <nav id="menu" class="menu" aria-label="Hovedmenu">
+          <button class="menu-close" type="button" aria-label="Luk menu">&times;</button>
+          <ul>
+            {site.nav.map((i: NavItem) =>
+              i.children ? (
+                <li class="has-sub">
+                  <span class="sub-label" aria-current={active(i) ? 'true' : undefined}>{i.label}</span>
+                  <ul>
+                    {i.children.map((c) => (
+                      <li><a href={c.href} aria-current={path.startsWith(c.href) ? 'page' : undefined}>{c.label}</a></li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li><a href={i.href} aria-current={active(i) ? 'page' : undefined}>{i.label}</a></li>
+              ),
+            )}
+          </ul>
+          <a class="menu-call" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
         </nav>
+        <div class="scrim" hidden></div>
         <a class="nav-cta" href={`tel:${site.phoneHref}`}>
           <span class="nav-cta-label">Ring</span> <span class="nav-cta-num">{site.phone}</span>
         </a>
@@ -125,15 +117,26 @@ const ld = {
       <a class="btn" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
       <a class="btn alt" href={`mailto:${site.email}`}>Skriv en mail</a>
     </div>
-    <DesignToggle />
     <script is:inline>
       (function () {
-        var m = document.querySelector('.menu');
-        if (!m) return;
-        var mq = matchMedia('(min-width: 801px)');
-        var sync = function () { m.open = mq.matches; };
-        sync();
-        mq.addEventListener('change', sync);
+        var btn = document.querySelector('.menu-btn');
+        var menu = document.getElementById('menu');
+        var scrim = document.querySelector('.scrim');
+        if (!btn || !menu) return;
+        var root = document.documentElement;
+        var set = function (open) {
+          root.classList.toggle('menu-open', open);
+          btn.setAttribute('aria-expanded', String(open));
+          scrim.hidden = !open;
+          if (open) menu.querySelector('.menu-close').focus(); else if (root.dataset.wasOpen) btn.focus();
+          root.dataset.wasOpen = open ? '1' : '';
+        };
+        btn.addEventListener('click', function () { set(true); });
+        menu.querySelector('.menu-close').addEventListener('click', function () { set(false); });
+        scrim.addEventListener('click', function () { set(false); });
+        menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && root.classList.contains('menu-open')) set(false); });
+        matchMedia('(min-width: 801px)').addEventListener('change', function (e) { if (e.matches) set(false); });
       })();
     </script>
   </body>
