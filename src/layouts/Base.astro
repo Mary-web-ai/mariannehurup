@@ -2,55 +2,139 @@
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/600.css';
 import '../styles/global.css';
+import '../styles/designs/index.css';
 import logo from '../assets/brand/logo.svg';
-import { site } from '../site';
+import DesignToggle from '../components/DesignToggle.astro';
+import { site, type NavItem } from '../site';
 
 interface Props {
   title: string;
   description?: string;
 }
 const { title, description = `${site.name}, ${site.tagline.toLowerCase()}. ${site.place}.` } = Astro.props;
-const fullTitle = Astro.url.pathname === '/' ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
+const isHome = Astro.url.pathname === '/';
+const fullTitle = isHome ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
+const canonical = new URL(path, site.url).href;
+const ogImage = new URL('/og.jpg', site.url).href;
+const active = (i: { href?: string; match?: string }) => (i.match ? path.startsWith(i.match) : i.href ? path.startsWith(i.href) : false);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': ['Physiotherapy', 'LocalBusiness'],
+  name: site.name,
+  description: `${site.tagline}. ${site.place}.`,
+  url: site.url,
+  telephone: `+${site.phoneHref.replace('+', '')}`,
+  email: site.email,
+  image: ogImage,
+  areaServed: ['Pandrup', 'Aalborg'],
+  address: { '@type': 'PostalAddress', addressLocality: 'Pandrup', addressCountry: 'DK' },
+};
 ---
 <!doctype html>
-<html lang="da">
+<html lang="da" data-design="current">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(path, site.url)} />
+    <meta name="theme-color" content="#fffdf9" />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="da_DK" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+    <script is:inline>
+      // Gem og genbrug valgt designforslag (kun til gennemsyn)
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get('design');
+          var d = q || localStorage.getItem('design');
+          if (d) document.documentElement.dataset.design = d;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <a class="skip" href="#indhold">Gå til indhold</a>
     <header class="nav">
-      <a class="brand" href="/" aria-label={`${site.name}, forside`}>
-        <img src={logo.src} alt="" width="44" height="32" />
-        <span>{site.name}</span>
-      </a>
-      <nav aria-label="Hovedmenu">
-        <ul>
-          {site.nav.map((i) => (
-            <li><a href={i.href} aria-current={path.startsWith(i.href) ? 'page' : undefined}>{i.label}</a></li>
-          ))}
-        </ul>
-      </nav>
+      <div class="nav-in">
+        <a class="brand" href="/" aria-label={`${site.name}, forside`}>
+          <img src={logo.src} alt="" width="44" height="32" />
+          <span>{site.name}</span>
+        </a>
+        <nav aria-label="Hovedmenu">
+          <details class="menu">
+            <summary><span>Menu</span></summary>
+            <ul>
+              {site.nav.map((i: NavItem) =>
+                i.children ? (
+                  <li class="has-sub">
+                    <span class="sub-label" aria-current={active(i) ? 'true' : undefined}>{i.label}</span>
+                    <ul>
+                      {i.children.map((c) => (
+                        <li><a href={c.href} aria-current={path.startsWith(c.href) ? 'page' : undefined}>{c.label}</a></li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li><a href={i.href} aria-current={active(i) ? 'page' : undefined}>{i.label}</a></li>
+                ),
+              )}
+            </ul>
+          </details>
+        </nav>
+        <a class="nav-cta" href={`tel:${site.phoneHref}`}>
+          <span class="nav-cta-label">Ring</span> <span class="nav-cta-num">{site.phone}</span>
+        </a>
+      </div>
     </header>
     <main id="indhold"><slot /></main>
     <footer class="foot">
       <div class="wrap foot-in">
-        <p><strong>{site.name}</strong><br />{site.tagline}, {site.place}</p>
-        <p>
-          <a href={`tel:${site.phoneHref}`}>{site.phone}</a><br />
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-        </p>
+        <div class="foot-col">
+          <p><strong>{site.name}</strong><br />{site.tagline}, {site.place}</p>
+          {site.credentials && <p>{site.credentials}</p>}
+          {site.cvr && <p><small>CVR {site.cvr}</small></p>}
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Kontakt</p>
+          <ul class="foot-links">
+            <li><a href={`tel:${site.phoneHref}`}>{site.phone}</a></li>
+            <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Find rundt</p>
+          <ul class="foot-links">
+            {site.nav.flatMap((i: NavItem) => (i.children ? i.children.map((c) => ({ ...c, label: `Kvinder 40+ ${c.label}` })) : [{ href: i.href!, label: i.label }])).map((l) => (
+              <li><a href={l.href}>{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
+    <div class="callbar" role="region" aria-label="Kontakt hurtigt">
+      <a class="btn" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
+      <a class="btn alt" href={`mailto:${site.email}`}>Skriv en mail</a>
+    </div>
+    <DesignToggle />
+    <script is:inline>
+      (function () {
+        var m = document.querySelector('.menu');
+        if (!m) return;
+        var mq = matchMedia('(min-width: 801px)');
+        var sync = function () { m.open = mq.matches; };
+        sync();
+        mq.addEventListener('change', sync);
+      })();
+    </script>
   </body>
 </html>

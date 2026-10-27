@@ -15,7 +15,7 @@ const refs = (await getCollection('referencer')).sort((a, b) => a.data.order - b
           <p class="kicker">{r.data.kind}</p>
           <h2><a href={`/referencer/${r.id}/`}>{r.data.title}</a></h2>
           <p>{r.data.excerpt}</p>
-          <p><a class="more" href={`/referencer/${r.id}/`}>Læs mere</a></p>
+          <p class="more" aria-hidden="true">Læs mere →</p>
         </article>
       ))}
     </div>

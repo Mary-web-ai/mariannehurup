@@ -17,6 +17,7 @@ const rendered = await Promise.all(sections.map(async (s) => ({ s, Content: (awa
     image={heroImg}
     alt="Marianne Hurup"
     cta
+    variant="home"
   />
   {rendered.map(({ s, Content }, i) => (
     <section class:list={['section', s.data.tone === 'tint' && 'band']}>

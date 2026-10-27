@@ -9,13 +9,26 @@ export async function getStaticPaths() {
   return pages.filter((p) => p.id !== 'kontakt').map((p) => ({ params: { slug: p.id }, props: { page: p } }));
 }
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
 const d = page.data;
+const heading = d.heading ?? d.title;
+// Første h2 gentager ofte sidens h1: skjul den visuelt, men behold den som sektionsnavn
+const dupFirst = headings[0]?.depth === 2 && headings[0].text.trim() === heading.trim();
+const toc = headings.filter((h) => h.depth <= 3 && !(dupFirst && h === headings[0]) && h.depth === (headings.some((x) => x.depth === 3) ? 3 : 2));
+const tocItems = toc.length > 2 ? toc : headings.filter((h) => h.depth === 2 && !(dupFirst && h === headings[0]));
 ---
 <Base title={d.title} description={d.description}>
-  <Hero kicker={d.kicker} heading={d.heading ?? d.title} image={d.heroImage} />
-  <section class="section">
-    <div class="wrap prose"><Content /></div>
+  <Hero kicker={d.kicker} heading={heading} image={d.heroImage} />
+  <section class="section page">
+    <div class="wrap">
+      {tocItems.length > 2 && (
+        <nav class="toc" aria-label="Spring til">
+          <p class="kicker">Spring til</p>
+          <ul>{tocItems.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </nav>
+      )}
+      <div class:list={['prose', 'narrow', dupFirst && 'skip-first']}><Content /></div>
+    </div>
   </section>
   <Cta />
 </Base>

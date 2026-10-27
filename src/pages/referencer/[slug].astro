@@ -15,6 +15,7 @@ const { Content } = await render(r);
       <p><a class="more" href="/referencer/">← Alle referencer</a></p>
       <p class="kicker">{r.data.kind}</p>
       <h1>{r.data.title}</h1>
+      <blockquote class="pull"><p>{r.data.excerpt}</p></blockquote>
       {r.data.photo && <Image src={r.data.photo} alt="" widths={[400, 700]} sizes="(max-width: 700px) 100vw, 700px" />}
       <Content />
     </div>

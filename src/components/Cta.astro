@@ -1,9 +1,14 @@
 ---
+import { site } from '../site';
 ---
-<section class="band cta">
+<section class="band cta" aria-labelledby="cta-h">
   <div class="wrap">
     <p class="kicker">Vil du kontaktes angående</p>
-    <h2>Oplæg, foredrag, forløb eller workshop?</h2>
-    <p><a class="btn" href="/kontakt/">Kontakt</a></p>
+    <h2 id="cta-h">Oplæg, foredrag, forløb eller workshop?</h2>
+    <p class="cta-actions">
+      <a class="btn" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
+      <a class="btn alt" href={`mailto:${site.email}`}>Skriv en mail</a>
+    </p>
+    <p class="cta-note"><a href="/kontakt/">Se alle kontaktoplysninger</a></p>
   </div>
 </section>
