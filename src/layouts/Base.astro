@@ -1,0 +1,56 @@
+---
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '../styles/global.css';
+import logo from '../assets/brand/logo.svg';
+import { site } from '../site';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = `${site.name}, ${site.tagline.toLowerCase()}. ${site.place}.` } = Astro.props;
+const fullTitle = Astro.url.pathname === '/' ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, site.url)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="da_DK" />
+  </head>
+  <body>
+    <a class="skip" href="#indhold">Gå til indhold</a>
+    <header class="nav">
+      <a class="brand" href="/" aria-label={`${site.name}, forside`}>
+        <img src={logo.src} alt="" width="44" height="32" />
+        <span>{site.name}</span>
+      </a>
+      <nav aria-label="Hovedmenu">
+        <ul>
+          {site.nav.map((i) => (
+            <li><a href={i.href} aria-current={path.startsWith(i.href) ? 'page' : undefined}>{i.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+    <main id="indhold"><slot /></main>
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <p><strong>{site.name}</strong><br />{site.tagline}, {site.place}</p>
+        <p>
+          <a href={`tel:${site.phoneHref}`}>{site.phone}</a><br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

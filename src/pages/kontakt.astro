@@ -1,0 +1,21 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import { site } from '../site';
+const page = (await getEntry('pages', 'kontakt'))!;
+const { Content } = await render(page);
+---
+<Base title={page.data.title} description={page.data.description}>
+  <Hero kicker="Kontakt" heading="Kontakt mig" image={page.data.heroImage} />
+  <section class="section">
+    <div class="wrap">
+      <dl class="contact">
+        <div><dt>Ring til mig</dt><dd><a href={`tel:${site.phoneHref}`}>{site.phone}</a></dd></div>
+        <div><dt>Skriv til mig</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
+        <div><dt>Beliggenhed</dt><dd>{site.place}</dd></div>
+      </dl>
+      <div class="prose narrow"><Content /></div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import Cta from '../../components/Cta.astro';
+export async function getStaticPaths() {
+  return (await getCollection('referencer')).map((r) => ({ params: { slug: r.id }, props: { r } }));
+}
+const { r } = Astro.props;
+const { Content } = await render(r);
+---
+<Base title={`${r.data.title}, reference`} description={r.data.excerpt}>
+  <section class="section">
+    <div class="wrap prose narrow">
+      <p><a class="more" href="/referencer/">← Alle referencer</a></p>
+      <p class="kicker">{r.data.kind}</p>
+      <h1>{r.data.title}</h1>
+      {r.data.photo && <Image src={r.data.photo} alt="" widths={[400, 700]} sizes="(max-width: 700px) 100vw, 700px" />}
+      <Content />
+    </div>
+  </section>
+  <Cta />
+</Base>

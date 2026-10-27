@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Cta from '../components/Cta.astro';
+import heroImg from '../assets/photos/UJP_7532.jpg';
+
+const sections = (await getCollection('home')).sort((a, b) => a.id.localeCompare(b.id));
+const rendered = await Promise.all(sections.map(async (s) => ({ s, Content: (await render(s)).Content })));
+---
+<Base title="Forside">
+  <Hero
+    kicker="Fysioterapeut og FysioCoach · Pandrup og Aalborg"
+    heading="Et liv i harmoni"
+    sub="Handler om det hele menneske."
+    image={heroImg}
+    alt="Marianne Hurup"
+    cta
+  />
+  {rendered.map(({ s, Content }, i) => (
+    <section class:list={['section', s.data.tone === 'tint' && 'band']}>
+      <div class:list={['wrap', 'split', s.data.image && i % 2 === 1 && 'flip']}>
+        <div class="prose">
+          <Content />
+          {s.data.linkHref && <p><a class="btn alt" href={s.data.linkHref}>{s.data.linkText ?? 'Læs mere'}</a></p>}
+        </div>
+        {s.data.image && <Image class="side-img" src={s.data.image} alt={s.data.imageAlt} widths={[400, 700, 1000]} sizes="(max-width: 800px) 100vw, 45vw" />}
+      </div>
+    </section>
+  ))}
+  <Cta />
+</Base>

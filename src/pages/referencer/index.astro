@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import img from '../../assets/photos/UJP_7537.jpg';
+const refs = (await getCollection('referencer')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Referencer" description="Læs hvad mine kunder fortæller om samarbejdet.">
+  <Hero kicker="Referencer" heading="Læs hvad mine kunder fortæller" image={img} />
+  <section class="section">
+    <div class="wrap cards">
+      {refs.map((r) => (
+        <article class="card">
+          <p class="kicker">{r.data.kind}</p>
+          <h2><a href={`/referencer/${r.id}/`}>{r.data.title}</a></h2>
+          <p>{r.data.excerpt}</p>
+          <p><a class="more" href={`/referencer/${r.id}/`}>Læs mere</a></p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <Cta />
+</Base>
