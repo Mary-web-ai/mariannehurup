@@ -3,14 +3,12 @@ title: "Virksomheder – fysisk arbejdsmiljø"
 description: "Oplæg, rådgivning, Pauseflow og workshops om fysisk arbejdsmiljø, direkte hos jer eller online."
 kicker: "Fysisk arbejdsmiljø"
 heading: "Arbejdsmiljø, som giver plads til fokus og overblik"
+sub: |
+  Et velfungerende fysisk arbejdsmiljø handler ikke kun om inventar og indretning, men om sammenhængen mellem krop, bevægelse, det mentale, pauser og de krav, hverdagen stiller.
+
+  I arbejdet med mennesker tager jeg udgangspunkt i den konkrete hverdag og de vilkår, den enkelte står i. Gennem dialog og små, målrettede justeringer skabes bedre bevægelsesmuligheder, færre spændinger og mere sammenhæng. Det giver kroppen bedre betingelser og understøtter samtidig ro, overblik og mental klarhed gennem dagen.
 heroImage: "../../assets/photos/UJP_7603.jpg"
 ---
-## Harmoni i arbejdslivet
-
-Et velfungerende fysisk arbejdsmiljø handler ikke kun om inventar og indretning, men om sammenhængen mellem krop, bevægelse, det mentale, pauser og de krav, hverdagen stiller.
-
-I arbejdet med mennesker tager jeg udgangspunkt i den konkrete hverdag og de vilkår, den enkelte står i. Gennem dialog og små, målrettede justeringer skabes bedre bevægelsesmuligheder, færre spændinger og mere sammenhæng. Det giver kroppen bedre betingelser og understøtter samtidig ro, overblik og mental klarhed gennem dagen.
-
 ## Mine tilbud til virksomheder
 
 Vælg det, der passer til jeres arbejdsplads. Alle tilbud tilpasses jeres hverdag.

@@ -18,7 +18,7 @@ const toc = headings.filter((h) => h.depth <= 3 && !(dupFirst && h === headings[
 const tocItems = toc.length > 2 ? toc : headings.filter((h) => h.depth === 2 && !(dupFirst && h === headings[0]));
 ---
 <Base title={d.title} description={d.description}>
-  <Hero kicker={d.kicker} heading={heading} image={d.heroImage} />
+  <Hero kicker={d.kicker} heading={heading} sub={d.sub} image={d.heroImage} />
   <section class="section page">
     <div class="wrap">
       {tocItems.length > 2 && (

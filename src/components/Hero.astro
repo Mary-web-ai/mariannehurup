@@ -10,7 +10,7 @@ const { kicker, heading, sub, image, alt = '', cta = false, variant } = Astro.pr
     <div class="hero-text">
       {kicker && <p class="kicker">{kicker}</p>}
       <h1>{heading}</h1>
-      {sub && <p class="lead">{sub}</p>}
+      {sub && sub.trim().split(/\n\s*\n/).map((t) => <p class="lead">{t.trim()}</p>)}
       {cta && (
         <p class="hero-actions">
           <a class="btn" href={site.booking}>{site.bookingLabel}</a>
