@@ -1,6 +1,6 @@
 ---
 title: "Om Marianne Hurup"
-description: "Fysioterapeut og FysioCoach. Uddannelse, erfaring og min måde at arbejde på."
+description: "Fysioterapeut. Uddannelse, erfaring og min måde at arbejde på."
 kicker: "Om mig"
 heading: "Om fysioterapeut Marianne Hurup"
 heroImage: "../../assets/photos/UJP_7636.jpg"

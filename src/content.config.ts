@@ -20,6 +20,7 @@ const home = defineCollection({
     z.object({
       image: image().optional(),
       imageAlt: z.string().default(''),
+      imagePosition: z.string().default('center'),
       tone: z.enum(['plain', 'tint']).default('plain'),
       linkText: z.string().optional(),
       linkHref: z.string().optional(),

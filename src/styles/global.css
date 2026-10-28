@@ -125,6 +125,11 @@ h3 { font-size: 1.3rem; }
 .prose p.price strong { font-size: 1.2rem; text-transform: none; letter-spacing: 0; color: var(--fg); }
 .prose p.price .btn { margin-left: auto; padding: 0.55rem 1.1rem; font-size: 0.95rem; }
 
+/* Tilbudskort (### i markdown) */
+.prose .offer { margin-top: 1.5rem; padding: 1.5rem 1.5rem 1.75rem; background: var(--card, #fff); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: var(--radius); }
+.prose .offer > h3 { margin-top: 0; }
+.prose .offer p.price { background: var(--band); }
+
 /* Spring til */
 .toc { background: var(--band); border-radius: var(--radius); padding: 1.1rem 1.4rem; margin-bottom: 2.5rem; max-width: 46rem; }
 .toc .kicker { margin-bottom: 0.25rem; }

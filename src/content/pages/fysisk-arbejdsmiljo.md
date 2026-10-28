@@ -11,9 +11,11 @@ Et velfungerende fysisk arbejdsmiljø handler ikke kun om inventar og indretning
 
 I arbejdet med mennesker tager jeg udgangspunkt i den konkrete hverdag og de vilkår, den enkelte står i. Gennem dialog og små, målrettede justeringer skabes bedre bevægelsesmuligheder, færre spændinger og mere sammenhæng. Det giver kroppen bedre betingelser og understøtter samtidig ro, overblik og mental klarhed gennem dagen.
 
-## Oplæg og 1:1 rådgivning
+## Mine tilbud til virksomheder
 
-Oplæg og individuel rådgivning
+Vælg det, der passer til jeres arbejdsplads. Alle tilbud tilpasses jeres hverdag.
+
+### Oplæg og 1:1 rådgivning
 
 En fleksibel løsning med fokus på det fysiske arbejdsmiljø, kropslig bevidsthed og et mere harmonisk flow i arbejdsdagen. Et enkelt tiltag, der kan integreres i hverdagen og understøtte trivsel og nærvær på arbejdspladsen.
 
@@ -36,9 +38,7 @@ En fleksibel løsning med fokus på det fysiske arbejdsmiljø, kropslig bevidsth
 
 **6.500 kr. ekskl. moms**
 
-## Pauseflow
-
-Pauseflow forløb
+### Pauseflow
 
 Et kort, roligt bevægelsesflow, der giver medarbejdere en bevidst pause i arbejdsdagen. Pauseflow kan understøtte trivsel, fokus og et mere bæredygtigt arbejdstempo og tilbydes både på virksomheden og online.
 
@@ -58,9 +58,13 @@ Et kort, roligt bevægelsesflow, der giver medarbejdere en bevidst pause i arbej
 
 Pauseflow 1 x ugentligt over 12 uger on site/online
 
-**On site 7.800 / Online 7200 kr. ekskl. moms**
+**On site 7.800 / Online 7.200 kr. ekskl. moms**
 
-## Harmoni i arbejdsdagen
+Alternativ online:
+
+**2 × 15 min. ugentligt online – 800 kr. + moms**
+
+### Workshop: Harmoni i arbejdsdagen
 
 3 timers faciliteret workshop for medarbejdere
 

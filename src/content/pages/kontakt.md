@@ -1,6 +1,6 @@
 ---
 title: "Kontakt"
-description: "Ring eller skriv til Marianne Hurup, fysioterapeut og FysioCoach i Pandrup og Aalborg."
+description: "Ring eller skriv til Marianne Hurup, fysioterapeut i Pandrup og Aalborg."
 heroImage: "../../assets/photos/UJP_7615.jpg"
 ---
 

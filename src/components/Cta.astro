@@ -6,9 +6,8 @@ import { site } from '../site';
     <p class="kicker">Vil du kontaktes angående</p>
     <h2 id="cta-h">Oplæg, foredrag, forløb eller workshop?</h2>
     <p class="cta-actions">
-      <a class="btn" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
-      <a class="btn alt" href={`mailto:${site.email}`}>Skriv en mail</a>
+      <a class="btn" href={site.booking}>{site.bookingLabel}</a>
     </p>
-    <p class="cta-note"><a href="/kontakt/">Se alle kontaktoplysninger</a></p>
+    <p class="cta-note">Eller ring <a href={`tel:${site.phoneHref}`}>{site.phone}</a> · <a href={`mailto:${site.email}`}>{site.email}</a></p>
   </div>
 </section>

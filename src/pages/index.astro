@@ -11,7 +11,7 @@ const rendered = await Promise.all(sections.map(async (s) => ({ s, Content: (awa
 ---
 <Base title="Forside">
   <Hero
-    kicker="Fysioterapeut og FysioCoach · Pandrup og Aalborg"
+    kicker="Fysioterapeut · Pandrup og Aalborg"
     heading="Et liv i harmoni"
     sub="Handler om det hele menneske."
     image={heroImg}
@@ -26,7 +26,7 @@ const rendered = await Promise.all(sections.map(async (s) => ({ s, Content: (awa
           <Content />
           {s.data.linkHref && <p><a class="btn alt" href={s.data.linkHref}>{s.data.linkText ?? 'Læs mere'}</a></p>}
         </div>
-        {s.data.image && <Image class="side-img" src={s.data.image} alt={s.data.imageAlt} widths={[400, 700, 1000]} sizes="(max-width: 800px) 100vw, 45vw" />}
+        {s.data.image && <Image class="side-img" style={`object-position: ${s.data.imagePosition}`} src={s.data.image} alt={s.data.imageAlt} widths={[400, 700, 1000]} sizes="(max-width: 800px) 100vw, 45vw" />}
       </div>
     </section>
   ))}

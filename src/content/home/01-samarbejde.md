@@ -1,7 +1,7 @@
 ---
 image: "../../assets/photos/UJP_7734.jpg"
 imageAlt: "Marianne Hurup"
-linkText: "Læs mere om mig"
+linkText: "Læs mere"
 linkHref: "/marianne-hurup/"
 ---
 

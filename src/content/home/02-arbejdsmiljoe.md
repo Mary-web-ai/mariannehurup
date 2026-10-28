@@ -2,7 +2,7 @@
 tone: "tint"
 image: "../../assets/photos/UJP_7669.jpg"
 imageAlt: "Marianne Hurup i samtale med en medarbejder"
-linkText: "Skræddersyet virksomhedsforløb"
+linkText: "Læs mere"
 linkHref: "/fysisk-arbejdsmiljo/"
 ---
 

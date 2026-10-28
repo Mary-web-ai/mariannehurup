@@ -13,8 +13,8 @@ const { kicker, heading, sub, image, alt = '', cta = false, variant } = Astro.pr
       {sub && <p class="lead">{sub}</p>}
       {cta && (
         <p class="hero-actions">
-          <a class="btn" href="/kontakt/">Kontakt mig</a>
-          <a class="btn alt" href={`tel:${site.phoneHref}`}>Ring {site.phone}</a>
+          <a class="btn" href={site.booking}>{site.bookingLabel}</a>
+          <a class="btn alt" href="/kontakt/">Kontakt mig</a>
         </p>
       )}
     </div>

@@ -1,7 +1,8 @@
 ---
 image: "../../assets/photos/UJP_7570.jpg"
 imageAlt: "Marianne Hurup"
-linkText: "Forløb i Pandrup"
+imagePosition: "center 12%"
+linkText: "Læs mere"
 linkHref: "/kvinder-40-forlob-pandrup/"
 ---
 

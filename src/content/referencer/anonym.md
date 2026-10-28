@@ -13,7 +13,7 @@ Et flot tilbud til og med gratis. Jeg oplevede mig dog udfordret af, at tilbudde
 
 Jeg havde brug for mere et 6 ugers kursus og en træning målrettet mig personligt.
 
-**Hvordan har du hørt om FysioCoach? Og hvad var afgørende for at du tog kontakt?**
+**Hvordan har du hørt om Marianne Hurup? Og hvad var afgørende for at du tog kontakt?**
 
 En anbefaling fra en arbejdskollega, som selv var i gang med et forløb hos Marianne. Jeg havde inden da søgt på nettet, men ikke fundet det rigtige, da det ikke kun handler om en træners faglige kunden, men mindst ligeså meget om tillid. Derfor var det også vigtigt for mig, at Marianne tilbød en gratis før-samtale, hvilket gav mig et indtryk af hendes arbejdsfacon og faglighed. Det var tydeligt med det samme, at her var der et usædvanligt nærværende fokus på klienten.
 
@@ -35,6 +35,6 @@ Jeg er selv overbevidst om, at den personlig målrettede træning jeg har været
 
 Ja, en viden om hvordan min krop kan trænes bedst muligt, dvs. hvor jeg hele tiden presses uden at det går ud over lysten til træne, dernæst en erkendelse af, at det er nødvendigt for mig at søge vejledning og råd fra en professionel, hvis det skal lykkes at få en hverdag, hvor træning fastholdes som en naturlig del.
 
-**Kan du beskrive FysioCoach med tre ord?**
+**Kan du beskrive Marianne med tre ord?**
 
 Faglighed, Personlighed og Tillidsvækkende

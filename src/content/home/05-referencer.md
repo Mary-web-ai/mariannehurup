@@ -1,5 +1,5 @@
 ---
-linkText: "Læs alle mine referencer"
+linkText: "Læs mere"
 linkHref: "/referencer/"
 ---
 

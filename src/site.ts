@@ -3,7 +3,9 @@ export type NavItem = { href?: string; label: string; match?: string; children?:
 
 export const site = {
   name: 'Marianne Hurup',
-  tagline: 'Fysioterapeut og FysioCoach',
+  tagline: 'Harmoni, når du er med dig selv i alt',
+  booking: 'https://mariannehurup.setmore.com/',
+  bookingLabel: 'Book en gratis forventningsafstemning',
   url: 'https://mariannehurup.dk',
   phone: '29 92 15 22',
   phoneHref: '+4529921522',

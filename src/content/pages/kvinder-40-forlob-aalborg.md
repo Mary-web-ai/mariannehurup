@@ -1,6 +1,6 @@
 ---
 title: "Kvinder 40+ forløb i Aalborg"
-description: "Individuelle samtale- og bevægelsesforløb for kvinder 40+ hos NOVI i Aalborg."
+description: "Individuelle samtale- og bevægelsesforløb for kvinder 40+ i Aalborg eller online."
 kicker: "Hold, sessioner, forløb"
 heading: "Træd ind i et rum for flow og harmoni"
 heroImage: "../../assets/photos/UJP_7632.jpg"
@@ -9,7 +9,7 @@ heroImage: "../../assets/photos/UJP_7632.jpg"
 
 Mange kvinder oplever, at kroppen forandrer sig, og at det, som tidligere fungerede, ikke længere har samme effekt. Andre ønsker at være på forkant og støtte kroppen, før gener eller symptomer får lov at fylde mere end nødvendigt. Fælles er længslen efter større forståelse og en måde at lytte til kroppen og samarbejde med den på, frem for at presse den – så valg og vaner kan tilpasses det liv, der leves, og holde over tid.
 
-## NOVI, Aalborg
+Fysisk i Aalborg hos NOVI eller online.
 
 ### Fundamentforløbet – når du er med dig selv i alt
 
@@ -31,10 +31,6 @@ Kan foregå online eller fysisk i Aalborg.
 
 *(Prisen er inkl. forberedelse og løbende mailkontakt ved behov)*
 
-**Book gratis forventningsafstemning her:**
-
-[https://mariannehurup.setmore.com/](https://mariannehurup.setmore.com/)
-
 ### Forankringsforløbet – når du er med dig selv i alt
 
 **4-ugers individuelt samtaleforløb for kvinder, som har gjort meget selv og nu ønsker faglig hjælp til at skabe et samlet, harmonisk overblik**
@@ -55,10 +51,6 @@ Kan foregå online eller fysisk i Aalborg.
 
 *(Prisen er inkl. forberedelse og løbende mailkontakt ved behov)*
 
-**Book gratis forventningsafstemning her:**
-
-[https://mariannehurup.setmore.com/](https://mariannehurup.setmore.com/)
-
 ### Bevægelse og tryghed
 
 **4-ugers individuelt bevægelsesforløb for kvinder med behov for tryg, tilpasset træning – med fokus på styrke, stabilitet og tillid til kroppen. Online eller fysisk i Aalborg.**
@@ -78,10 +70,6 @@ Forløbet kan foregå online eller fysisk i Aalborg eller Pandrup.
 **4 × 45 min. – Pris: 2.595 kr.**
 
 *(Prisen er inkl. forberedelse og løbende mailkontakt ved behov)*
-
-**Book gratis forventningsafstemning her:**
-
-[https://mariannehurup.setmore.com/](https://mariannehurup.setmore.com/)
 
 ### Særlige øjeblikke for krop og sind
 
