@@ -157,7 +157,7 @@ h3 { font-size: 1.3rem; }
 /* Kontakt */
 .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; margin: 0 0 3rem; padding: 0; }
 .contact dt { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
-.contact dd { margin: 0; font-size: 1.5rem; font-weight: 600; overflow-wrap: anywhere; font-family: var(--font-head); }
+.contact dd { margin: 0; color: var(--accent); font-size: 1.5rem; font-weight: 600; overflow-wrap: anywhere; font-family: var(--font-head); }
 .contact a { text-decoration: none; }
 
 /* Afslutning */
