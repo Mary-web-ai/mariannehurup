@@ -74,6 +74,26 @@ Med udgangspunkt i BÅDASSSS-modellen, udviklet af Marianne Hurup.
 
 **8 gange á 90min., pris 3000 kr. Earlybird til og med 21. januar 2500kr. LUKKET for tilmelding.**
 
+### Bevægelse og tryghed
+
+**4-ugers individuelt bevægelsesforløb for kvinder med behov for tryg, tilpasset træning – med fokus på styrke, stabilitet og tillid til kroppen. Online eller fysisk i Pandrup.**
+
+**Til dig med fysiske udfordringer, der ønsker tryg og målrettet træning**
+
+Et individuelt bevægelsesforløb med fokus på tryghed, progression og det rette niveau for dig, der ønsker at opbygge styrke, stabilitet, mobilitet og bevægelsesglæde uden at presse kroppen eller overhøre dens signaler.
+
+Dette 4-ugers personlige forløb er for kvinder, der har et ønske om bevægelse og styrke, men som har fysiske udfordringer, der gør, at almindelig træning ikke opleves tryg eller hensigtsmæssig. Forløbet henvender sig bl.a til dig med smerter, nedsat belastningstolerance, tidligere skader, osteoporose eller kvinder i og efter overgangsalderen, som har brug for individuel tilpasning, faglig guidning og et tempo, hvor kroppen kan følge med.
+
+Forløbet er et fysioterapeutisk træningsforløb, hvor fokus er på at opbygge et stabilt fundament gennem styrke, bevægelse og kropslig tryghed. Træningen tilpasses løbende dit udgangspunkt, din energi og din hverdag og tager højde for, at kroppen kan have brug for tid, differentiering og gradvis opbygning. Målet er, at du opnår større tillid til din krop i bevægelse.
+
+Samarbejdet bygger på guidet træning, undervisning og dialog. Sessionerne tager afsæt spørgeskema, i dine erfaringer med træning, eventuelle smerter, usikkerhed eller tidligere skader og giver dig konkrete redskaber, som du kan bruge videre på egen hånd – også efter forløbets afslutning.
+
+Forløbet kan foregå online eller fysisk i Pandrup eller Aalborg.
+
+**4 × 45 min. – Pris: 2.595 kr.**
+
+*(Prisen er inkl. forberedelse og løbende mailkontakt ved behov)*
+
 ### Særlige øjeblikke for krop og sind
 
 Her kan du se de pop-up hold, events og workshops, jeg tilbyder i løbet af året – skabt som små pauser med plads til krop, nærvær og refleksion.
