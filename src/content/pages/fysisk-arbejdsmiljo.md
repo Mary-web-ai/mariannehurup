@@ -38,11 +38,11 @@ En fleksibel løsning med fokus på det fysiske arbejdsmiljø, kropslig bevidsth
 
 ### Pauseflow
 
-Et kort, roligt bevægelsesflow, der giver medarbejdere en bevidst pause i arbejdsdagen. Pauseflow kan understøtte trivsel, fokus og et mere bæredygtigt arbejdstempo og tilbydes både på virksomheden og online.
+Et kort, roligt bevægelsesflow, der giver medarbejdere en bevidst pause i arbejdsdagen. Pauseflow kan understøtte trivsel, fokus og et mere bæredygtigt arbejdstempo og tilbydes online.
 
 **Ramme**
 
-- 20 min. tilpasset og effektiv bevægelse
+- 2 × 15 min. ugentligt, fordelt på dage, med tilpasset og effektiv bevægelse
 - "Følg mig" bevægelser
 
 **Mulige fokusområder**
@@ -54,13 +54,9 @@ Et kort, roligt bevægelsesflow, der giver medarbejdere en bevidst pause i arbej
 
 **Priseksempel**
 
-Pauseflow 1 x ugentligt over 12 uger on site/online
+Pauseflow 2 × 15 min. ugentligt over 12 uger online
 
-**On site 7.800 / Online 7.200 kr. ekskl. moms**
-
-Alternativ online:
-
-**2 × 15 min. ugentligt online – 800 kr. + moms**
+**9.600 kr. ekskl. moms**
 
 ### Workshop: Harmoni i arbejdsdagen
 
